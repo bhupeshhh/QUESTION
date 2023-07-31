@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO BHUPESH'S WEBSITE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: aquamarine;
+            border: 3px solid powderblue;
+            border-radius: 20px;
+            margin: 45px;
+            padding: 45px;
+            font-size: xx-large;
+            font-weight: 700;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            text-align: center;
+        }
+
+        #btn {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(42, 200, 137, 0.945);
+            border-radius: 20px;
+        }
+
+        .option {
+            background-color: rgba(42, 200, 137, 0.945);
+            display: inline-block;
+            padding: 20px;
+            margin: 20px;
+            width: -webkit-fill-available;
+            border: 5px solid rgba(42, 200, 137, 0.945);
+
+        }
+
+        .option:hover {
+            border: 5px solid gold;
+            background-color: rgba(22, 238, 145, 0.608);
+            color: gold;
+            ;
+        }
+
+        .ans {
+            background-color: cadetblue;
+            border: 3px solid yellowgreen;
+            border-radius: 25px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+
+
+        .reply {
+            font-size: xx-large;
+
+            /* margin: 20px 20px 0px 20px; */
+            /* padding: 20px 20px 0px 20px; */
+            margin: -10px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p> Hey! <span id="namee">user</span> whatsup...?</p>
+    </div>
+
+    <div class="container">
+        <p>your relation with bhupesh is of : LOVE or HATE ? </p>
+        <div id="btn">
+            <button class="option" id="YES"  onclick="toggleHideYes()"> YES </button>
+            <div style="border : 4px solid rgb(27, 209, 197)"></div>
+            <button class="option" id="NO"  onclick="toggleHideNo()"> NO </button>
+        </div>
+
+        <div class="show">
+            <div class="ans" id="yes" style="display: none;">
+                <p>how Sweeeeeettttt...&#128580;</p>
+                <p>yah lo aap ka liyaa gulabi dil</p>
+                <p>&nbsp;</p>
+                <p class="reply">/\⁔/\</p>
+                <p class="reply"> ( o.o)</p>
+                <p class="reply"> > &#128151</p>
+            </div>
+
+            <div class="ans" id="no" style="display: none;">
+                <p>how ruddddeeeeee...&#129402;</p>
+                <p>prr firr be yah lo aap ka liyaa gulabi dil</p>
+                <p>&nbsp;</p>
+                <p class="reply">/\⁔/\</p>
+                <p class="reply" id="eye"> ( o.o)</p>
+                <p class="reply" id="mid"> > &#128151;</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        //taking name from the user and greeting him or her
+        setTimeout(() => {
+            let name = prompt("what is your name?", "guest");
+
+            if (name == undefined) {
+
+            }
+            else {
+                setTimeout(() => {
+
+                    document.getElementById('namee').innerHTML = name
+                }, 1000);
+
+            }
+
+        }, 5000);
+
+        function toggleHideYes()
+        // let YES = Document.getElementById('YES');
+        // let yes = Document.getElementById('yes');
+        {
+            if (yes.style.display != "none") {
+                no.style.display = "none";
+                yes.style.display = "none";
+                document.getElementById('mid').innerHTML =">  &#128151;"
+                document.getElementById('eye').innerHTML =" ( o.o)"
+            }
+
+            else {
+                no.style.display = "none";
+                yes.style.display = "block";
+                document.getElementById('mid').innerHTML =">  &#128151;"
+                document.getElementById('eye').innerHTML =" ( o.o)"
+            }
+        }
+
+        
+        function toggleHideNo() {
+            if (no.style.display != "none") {
+                yes.style.display = "none";
+                document.getElementById('mid').innerHTML =">  &#128151;"
+                document.getElementById('eye').innerHTML =" ( o.o)"
+                no.style.display = "none";
+                
+            }
+
+            else{
+                yes.style.display = "none";
+                no.style.display = "block";
+                setTimeout(() => {
+                    document.getElementById('mid').innerHTML =" &#128405; &nbsp; &#128405;  "
+                    document.getElementById('eye').innerHTML =" ( ^_~ ) "
+                }, 4000);
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
